@@ -1,0 +1,667 @@
+[
+  {
+    "id": "st_001",
+    "name": "Bruschetta",
+    "description": "Toasted sourdough, fresh tomato, basil, balsamic glaze",
+    "price": 7.99,
+    "categoryId": "starters",
+    "image": "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=400&q=80",
+    "tags": [
+      "italian",
+      "vegetarian",
+      "popular"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_003",
+      "dd_004"
+    ],
+    "calories": 320,
+    "prepTime": "10 mins",
+    "available": true
+  },
+  {
+    "id": "st_002",
+    "name": "Crispy Calamari",
+    "description": "Lightly battered, served with lemon aioli",
+    "price": 11.99,
+    "categoryId": "starters",
+    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=80",
+    "tags": [
+      "seafood",
+      "crispy"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "dd_005"
+    ],
+    "calories": 480,
+    "prepTime": "14 mins",
+    "available": true
+  },
+  {
+    "id": "st_003",
+    "name": "Soup of the Day",
+    "description": "Chef daily creation, rich and comforting",
+    "price": 8.99,
+    "categoryId": "starters",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80",
+    "tags": [
+      "chef-special"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "dd_003"
+    ],
+    "calories": 250,
+    "prepTime": "8 mins",
+    "available": true
+  },
+  {
+    "id": "st_004",
+    "name": "Cheese Board",
+    "description": "Selection of artisan cheeses, crackers, seasonal fruit",
+    "price": 13.99,
+    "categoryId": "starters",
+    "image": "https://images.unsplash.com/photo-1668094497457-29f4bd775c95?w=400&q=80",
+    "tags": [
+      "sharing",
+      "artisan"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_004"
+    ],
+    "calories": 620,
+    "prepTime": "6 mins",
+    "available": true
+  },
+  {
+    "id": "st_005",
+    "name": "Truffle Fries",
+    "description": "Hand-cut fries, truffle oil, parmesan, fresh herbs",
+    "price": 8.99,
+    "categoryId": "starters",
+    "image": "https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=400&q=80",
+    "tags": [
+      "fries",
+      "truffle",
+      "best-seller"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "mc_001",
+      "mc_002"
+    ],
+    "calories": 540,
+    "prepTime": "12 mins",
+    "available": true
+  },
+  {
+    "id": "st_006",
+    "name": "Buffalo Wings",
+    "description": "Spicy chicken wings with blue cheese dip",
+    "price": 12.99,
+    "categoryId": "starters",
+    "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&q=80",
+    "tags": [
+      "spicy",
+      "wings"
+    ],
+    "spiceLevel": 3,
+    "dietary": [],
+    "pairsWith": [
+      "dd_003"
+    ],
+    "calories": 690,
+    "prepTime": "16 mins",
+    "available": true
+  },
+  {
+    "id": "st_007",
+    "name": "Garlic Shrimp Skillet",
+    "description": "Sauteed shrimp, garlic butter, parsley, chili flakes",
+    "price": 13.49,
+    "categoryId": "starters",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80",
+    "tags": [
+      "seafood",
+      "garlic"
+    ],
+    "spiceLevel": 1,
+    "dietary": [
+      "gluten-free"
+    ],
+    "pairsWith": [
+      "dd_005"
+    ],
+    "calories": 430,
+    "prepTime": "13 mins",
+    "available": true
+  },
+  {
+    "id": "st_008",
+    "name": "Mozzarella Sticks",
+    "description": "Golden fried mozzarella with marinara sauce",
+    "price": 9.49,
+    "categoryId": "starters",
+    "image": "https://images.unsplash.com/photo-1531749668029-2db88e4276c7?w=400&q=80",
+    "tags": [
+      "cheesy",
+      "fried"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_003"
+    ],
+    "calories": 510,
+    "prepTime": "11 mins",
+    "available": true
+  },
+  {
+    "id": "mc_001",
+    "name": "Grilled Chicken Burger",
+    "description": "Grilled chicken, lettuce, tomato, bistro sauce",
+    "price": 14.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80",
+    "tags": [
+      "burger",
+      "chicken"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "st_005",
+      "dd_003"
+    ],
+    "calories": 760,
+    "prepTime": "18 mins",
+    "available": true
+  },
+  {
+    "id": "mc_002",
+    "name": "Spicy Chicken Sandwich",
+    "description": "Crispy chicken, jalapeno slaw, sriracha mayo",
+    "price": 13.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400&q=80",
+    "tags": [
+      "spicy",
+      "sandwich",
+      "popular"
+    ],
+    "spiceLevel": 2,
+    "dietary": [],
+    "pairsWith": [
+      "st_005",
+      "dd_005"
+    ],
+    "calories": 810,
+    "prepTime": "17 mins",
+    "available": true
+  },
+  {
+    "id": "mc_003",
+    "name": "Margherita Pizza",
+    "description": "San Marzano tomato, buffalo mozzarella, fresh basil",
+    "price": 15.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80",
+    "tags": [
+      "pizza",
+      "vegetarian"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_004"
+    ],
+    "calories": 920,
+    "prepTime": "20 mins",
+    "available": true
+  },
+  {
+    "id": "mc_004",
+    "name": "Ribeye Steak",
+    "description": "12oz prime ribeye, herb butter, seasonal vegetables",
+    "price": 28.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1546964124-0cce460f38ef?w=400&q=80",
+    "tags": [
+      "steak",
+      "premium"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "gluten-free"
+    ],
+    "pairsWith": [
+      "st_004",
+      "dd_005"
+    ],
+    "calories": 1180,
+    "prepTime": "28 mins",
+    "available": true
+  },
+  {
+    "id": "mc_005",
+    "name": "Pasta Carbonara",
+    "description": "Spaghetti, guanciale, egg yolk, pecorino, black pepper",
+    "price": 16.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400&q=80",
+    "tags": [
+      "pasta",
+      "italian"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "st_001"
+    ],
+    "calories": 870,
+    "prepTime": "19 mins",
+    "available": true
+  },
+  {
+    "id": "mc_006",
+    "name": "BBQ Bacon Burger",
+    "description": "Beef patty, cheddar, crispy bacon, smoky BBQ sauce",
+    "price": 16.49,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80",
+    "tags": [
+      "burger",
+      "bbq"
+    ],
+    "spiceLevel": 1,
+    "dietary": [],
+    "pairsWith": [
+      "st_005"
+    ],
+    "calories": 980,
+    "prepTime": "20 mins",
+    "available": true
+  },
+  {
+    "id": "mc_007",
+    "name": "Vegetarian Alfredo Pasta",
+    "description": "Creamy parmesan sauce, mushrooms, spinach, fettuccine",
+    "price": 15.49,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=400&q=80",
+    "tags": [
+      "vegetarian",
+      "pasta"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_004"
+    ],
+    "calories": 790,
+    "prepTime": "18 mins",
+    "available": true
+  },
+  {
+    "id": "mc_008",
+    "name": "Teriyaki Salmon Bowl",
+    "description": "Grilled salmon, jasmine rice, broccoli, sesame glaze",
+    "price": 19.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80",
+    "tags": [
+      "salmon",
+      "healthy"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "dd_005"
+    ],
+    "calories": 690,
+    "prepTime": "21 mins",
+    "available": true
+  },
+  {
+    "id": "mc_009",
+    "name": "Spicy Beef Tacos",
+    "description": "Three tacos, seasoned beef, salsa roja, lime crema",
+    "price": 14.49,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80",
+    "tags": [
+      "tacos",
+      "mexican",
+      "spicy"
+    ],
+    "spiceLevel": 3,
+    "dietary": [],
+    "pairsWith": [
+      "dd_003"
+    ],
+    "calories": 740,
+    "prepTime": "15 mins",
+    "available": true
+  },
+  {
+    "id": "mc_010",
+    "name": "Chicken Caesar Salad",
+    "description": "Romaine, grilled chicken, parmesan, garlic croutons",
+    "price": 13.49,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&q=80",
+    "tags": [
+      "salad",
+      "healthy"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "dd_005"
+    ],
+    "calories": 510,
+    "prepTime": "12 mins",
+    "available": true
+  },
+  {
+    "id": "mc_011",
+    "name": "Mushroom Risotto",
+    "description": "Creamy arborio rice, wild mushrooms, parmesan",
+    "price": 17.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&q=80",
+    "tags": [
+      "risotto",
+      "vegetarian"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "st_004"
+    ],
+    "calories": 680,
+    "prepTime": "24 mins",
+    "available": true
+  },
+  {
+    "id": "mc_012",
+    "name": "Fish and Chips",
+    "description": "Beer battered cod, fries, tartar sauce",
+    "price": 16.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=400&q=80",
+    "tags": [
+      "seafood",
+      "fried"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "dd_005"
+    ],
+    "calories": 950,
+    "prepTime": "20 mins",
+    "available": true
+  },
+  {
+    "id": "mc_013",
+    "name": "Thai Red Curry",
+    "description": "Coconut curry, vegetables, jasmine rice",
+    "price": 15.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&q=80",
+    "tags": [
+      "thai",
+      "curry",
+      "spicy"
+    ],
+    "spiceLevel": 2,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_003"
+    ],
+    "calories": 630,
+    "prepTime": "19 mins",
+    "available": true
+  },
+  {
+    "id": "mc_014",
+    "name": "Classic Pepperoni Pizza",
+    "description": "Mozzarella, pepperoni, tomato sauce",
+    "price": 17.49,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=80",
+    "tags": [
+      "pizza",
+      "pepperoni"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "dd_004"
+    ],
+    "calories": 1020,
+    "prepTime": "21 mins",
+    "available": true
+  },
+  {
+    "id": "mc_015",
+    "name": "Grilled Rib Sandwich",
+    "description": "Slow-cooked ribs, pickles, crispy onions, brioche bun",
+    "price": 18.99,
+    "categoryId": "mains",
+    "image": "https://images.unsplash.com/photo-1558030006-450675393462?w=400&q=80",
+    "tags": [
+      "bbq",
+      "sandwich"
+    ],
+    "spiceLevel": 1,
+    "dietary": [],
+    "pairsWith": [
+      "st_005"
+    ],
+    "calories": 990,
+    "prepTime": "23 mins",
+    "available": true
+  },
+  {
+    "id": "dd_001",
+    "name": "Mango Sorbet",
+    "description": "House-made, three scoops, fresh mango",
+    "price": 6.99,
+    "categoryId": "desserts",
+    "image": "https://images.unsplash.com/photo-1546548970-71785318a17b?w=400&q=80",
+    "tags": [
+      "cold",
+      "refreshing"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegan",
+      "gluten-free"
+    ],
+    "pairsWith": [],
+    "calories": 260,
+    "prepTime": "5 mins",
+    "available": true
+  },
+  {
+    "id": "dd_002",
+    "name": "Chocolate Lava Cake",
+    "description": "Warm dark chocolate, vanilla ice cream",
+    "price": 8.99,
+    "categoryId": "desserts",
+    "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80",
+    "tags": [
+      "chocolate",
+      "best-seller"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_004"
+    ],
+    "calories": 720,
+    "prepTime": "12 mins",
+    "available": true
+  },
+  {
+    "id": "dd_003",
+    "name": "Classic Lemonade",
+    "description": "Fresh-squeezed, lightly sweetened",
+    "price": 4.99,
+    "categoryId": "desserts",
+    "image": "https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=400&q=80",
+    "tags": [
+      "drink",
+      "refreshing"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegan"
+    ],
+    "pairsWith": [
+      "mc_002",
+      "mc_009"
+    ],
+    "calories": 180,
+    "prepTime": "3 mins",
+    "available": true
+  },
+  {
+    "id": "dd_004",
+    "name": "Iced Matcha Latte",
+    "description": "Ceremonial grade matcha, oat milk",
+    "price": 5.99,
+    "categoryId": "desserts",
+    "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400&q=80",
+    "tags": [
+      "matcha",
+      "drink"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegan"
+    ],
+    "pairsWith": [
+      "dd_002"
+    ],
+    "calories": 210,
+    "prepTime": "4 mins",
+    "available": true
+  },
+  {
+    "id": "dd_005",
+    "name": "Sparkling Water",
+    "description": "500ml bottle",
+    "price": 2.99,
+    "categoryId": "desserts",
+    "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&q=80",
+    "tags": [
+      "drink",
+      "water"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegan",
+      "gluten-free"
+    ],
+    "pairsWith": [
+      "mc_004",
+      "mc_008"
+    ],
+    "calories": 0,
+    "prepTime": "1 min",
+    "available": true
+  },
+  {
+    "id": "dd_006",
+    "name": "Tiramisu",
+    "description": "Espresso-soaked ladyfingers, mascarpone cream",
+    "price": 7.99,
+    "categoryId": "desserts",
+    "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=80",
+    "tags": [
+      "italian",
+      "coffee"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_004"
+    ],
+    "calories": 540,
+    "prepTime": "6 mins",
+    "available": true
+  },
+  {
+    "id": "dd_007",
+    "name": "New York Cheesecake",
+    "description": "Creamy cheesecake with berry compote",
+    "price": 8.49,
+    "categoryId": "desserts",
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&q=80",
+    "tags": [
+      "cake",
+      "sweet"
+    ],
+    "spiceLevel": 0,
+    "dietary": [
+      "vegetarian"
+    ],
+    "pairsWith": [
+      "dd_004"
+    ],
+    "calories": 690,
+    "prepTime": "5 mins",
+    "available": true
+  },
+  {
+    "id": "dd_008",
+    "name": "Vanilla Cold Brew",
+    "description": "Slow-steeped coffee with vanilla cream",
+    "price": 5.49,
+    "categoryId": "desserts",
+    "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80",
+    "tags": [
+      "coffee",
+      "cold"
+    ],
+    "spiceLevel": 0,
+    "dietary": [],
+    "pairsWith": [
+      "dd_006"
+    ],
+    "calories": 170,
+    "prepTime": "4 mins",
+    "available": true
+  }
+]

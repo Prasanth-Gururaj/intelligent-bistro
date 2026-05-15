@@ -1,0 +1,23 @@
+[
+  {
+    "id": "starters",
+    "name": "Starters",
+    "description": "Light bites, appetizers, and shareable plates to begin your dining experience.",
+    "displayOrder": 1,
+    "icon": "utensils-crossed"
+  },
+  {
+    "id": "mains",
+    "name": "Mains",
+    "description": "Signature entrees, burgers, pizzas, pasta, seafood, and chef-crafted specialties.",
+    "displayOrder": 2,
+    "icon": "chef-hat"
+  },
+  {
+    "id": "desserts",
+    "name": "Desserts & Drinks",
+    "description": "Sweet desserts, handcrafted beverages, coffees, and refreshing drinks.",
+    "displayOrder": 3,
+    "icon": "ice-cream-bowl"
+  }
+]
