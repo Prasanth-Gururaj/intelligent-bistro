@@ -1,4 +1,4 @@
-import { Modal, View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { Modal, View, Text, TouchableOpacity, ScrollView, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import useCartStore from '../store/cartStore';
 import { COLORS, SPACING, FONTS } from '../constants/theme';
 import { Minus, Plus, X } from 'lucide-react-native';
@@ -14,69 +14,73 @@ export default function CartSheet({ visible, onClose, onPlaceOrder }: CartSheetP
 
   return (
     <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
-      <View style={styles.overlay}>
-        <View style={styles.sheet}>
-          {/* Header */}
-          <View style={styles.header}>
-            <Text style={styles.headerTitle}>Your Cart</Text>
-            <TouchableOpacity onPress={onClose}>
-              <X size={24} color={COLORS.text} />
-            </TouchableOpacity>
-          </View>
-
-          {/* Cart Items or Empty State */}
-          {items.length === 0 ? (
-            <View style={styles.emptyContainer}>
-              <Text style={styles.emptyText}>Your cart is empty</Text>
-            </View>
-          ) : (
-            <ScrollView style={styles.itemsContainer} showsVerticalScrollIndicator={false}>
-              {items.map((item) => (
-                <View key={item.itemId} style={styles.cartItem}>
-                  <View style={styles.itemInfo}>
-                    <Text style={styles.itemName}>{item.name}</Text>
-                    <Text style={styles.itemTotal}>${(item.price * item.qty).toFixed(2)}</Text>
-                  </View>
-                  <View style={styles.qtyControls}>
-                    <TouchableOpacity
-                      style={styles.qtyBtn}
-                      onPress={() => updateQty(item.itemId, Math.max(0, item.qty - 1))}
-                    >
-                      <Minus size={16} color={COLORS.text} />
-                    </TouchableOpacity>
-                    <Text style={styles.qtyText}>{item.qty}</Text>
-                    <TouchableOpacity
-                      style={styles.qtyBtn}
-                      onPress={() => updateQty(item.itemId, item.qty + 1)}
-                    >
-                      <Plus size={16} color={COLORS.text} />
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                      style={styles.removeBtn}
-                      onPress={() => removeItem(item.itemId)}
-                    >
-                      <X size={16} color={COLORS.error} />
-                    </TouchableOpacity>
-                  </View>
-                </View>
-              ))}
-            </ScrollView>
-          )}
-
-          {/* Footer */}
-          {items.length > 0 && (
-            <View style={styles.footer}>
-              <View style={styles.totalRow}>
-                <Text style={styles.totalLabel}>Total:</Text>
-                <Text style={styles.totalAmount}>${total.toFixed(2)}</Text>
+      <TouchableWithoutFeedback onPress={onClose}>
+        <View style={styles.overlay}>
+          <TouchableWithoutFeedback onPress={() => {}}>
+            <View style={styles.sheet}>
+              {/* Header */}
+              <View style={styles.header}>
+                <Text style={styles.headerTitle}>Your Cart</Text>
+                <TouchableOpacity onPress={onClose}>
+                  <X size={24} color={COLORS.text} />
+                </TouchableOpacity>
               </View>
-              <TouchableOpacity style={styles.placeOrderBtn} onPress={onPlaceOrder}>
-                <Text style={styles.placeOrderText}>Place Order</Text>
-              </TouchableOpacity>
+
+              {/* Cart Items or Empty State */}
+              {items.length === 0 ? (
+                <View style={styles.emptyContainer}>
+                  <Text style={styles.emptyText}>Your cart is empty</Text>
+                </View>
+              ) : (
+                <ScrollView style={styles.itemsContainer} showsVerticalScrollIndicator={false}>
+                  {items.map((item) => (
+                    <View key={item.itemId} style={styles.cartItem}>
+                      <View style={styles.itemInfo}>
+                        <Text style={styles.itemName}>{item.name}</Text>
+                        <Text style={styles.itemTotal}>${(item.price * item.qty).toFixed(2)}</Text>
+                      </View>
+                      <View style={styles.qtyControls}>
+                        <TouchableOpacity
+                          style={styles.qtyBtn}
+                          onPress={() => updateQty(item.itemId, Math.max(0, item.qty - 1))}
+                        >
+                          <Minus size={16} color={COLORS.text} />
+                        </TouchableOpacity>
+                        <Text style={styles.qtyText}>{item.qty}</Text>
+                        <TouchableOpacity
+                          style={styles.qtyBtn}
+                          onPress={() => updateQty(item.itemId, item.qty + 1)}
+                        >
+                          <Plus size={16} color={COLORS.text} />
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                          style={styles.removeBtn}
+                          onPress={() => removeItem(item.itemId)}
+                        >
+                          <X size={16} color={COLORS.error} />
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                  ))}
+                </ScrollView>
+              )}
+
+              {/* Footer */}
+              {items.length > 0 && (
+                <View style={styles.footer}>
+                  <View style={styles.totalRow}>
+                    <Text style={styles.totalLabel}>Total:</Text>
+                    <Text style={styles.totalAmount}>${total.toFixed(2)}</Text>
+                  </View>
+                  <TouchableOpacity style={styles.placeOrderBtn} onPress={onPlaceOrder}>
+                    <Text style={styles.placeOrderText}>Place Order</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
             </View>
-          )}
+          </TouchableWithoutFeedback>
         </View>
-      </View>
+      </TouchableWithoutFeedback>
     </Modal>
   );
 }

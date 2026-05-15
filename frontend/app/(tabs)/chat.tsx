@@ -1,18 +1,19 @@
 import { useState, useRef, useEffect } from 'react';
-import { SafeAreaView, FlatList, View, TextInput, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import { SafeAreaView, FlatList, View, TextInput, TouchableOpacity, StyleSheet, Animated, KeyboardAvoidingView, Platform } from 'react-native';
 import { Send } from 'lucide-react-native';
 import ChatBubble from '../../components/ChatBubble';
 import useChatStore from '../../store/chatStore';
 import useCartStore from '../../store/cartStore';
 import { sendChatMessage } from '../../services/api';
 import { COLORS, SPACING, FONTS } from '../../constants/theme';
+import { MENU_ITEMS } from '../../data/menu';
 
 export default function ChatScreen() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const flatListRef = useRef<FlatList>(null);
   const { messages, addMessage } = useChatStore();
-  const { items, addItem, removeItem, updateQty } = useCartStore();
+  const { items, addItem, removeItem, updateQty, clearCart } = useCartStore();
   const dotAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -41,11 +42,15 @@ export default function ChatScreen() {
       if (result.actions) {
         for (const action of result.actions) {
           if (action.type === 'ADD') {
-            addItem({ itemId: action.itemId, name: action.itemName, price: 0 });
+            const menuItem = MENU_ITEMS.find(m => m.id === action.itemId);
+            const price = menuItem?.price ?? 0;
+            addItem({ itemId: action.itemId, name: action.itemName, price });
           } else if (action.type === 'REMOVE') {
             removeItem(action.itemId);
           } else if (action.type === 'UPDATE') {
             updateQty(action.itemId, action.quantity);
+          } else if (action.type === 'CLEAR') {
+            clearCart();
           }
         }
       }
@@ -59,41 +64,47 @@ export default function ChatScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <FlatList
-        ref={flatListRef}
-        data={messages}
-        renderItem={({ item }) => <ChatBubble message={item} />}
-        keyExtractor={(item) => item.id}
-        contentContainerStyle={styles.messageList}
-        onContentSizeChange={() => flatListRef.current?.scrollToEnd()}
-      />
-      {loading && (
-        <View style={styles.typingContainer}>
-          <Animated.View style={[styles.dot, { opacity: dotAnim }]} />
-          <Animated.View style={[styles.dot, { opacity: Animated.subtract(1, dotAnim) }]} />
-          <Animated.View style={[styles.dot, { opacity: Animated.subtract(1, dotAnim) }]} />
-        </View>
-      )}
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Ask Bistro anything..."
-          placeholderTextColor={COLORS.textMuted}
-          value={input}
-          onChangeText={setInput}
-          editable={!loading}
-          multiline
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      keyboardVerticalOffset={90}
+      style={styles.container}
+    >
+      <SafeAreaView style={styles.container}>
+        <FlatList
+          ref={flatListRef}
+          data={messages}
+          renderItem={({ item }) => <ChatBubble message={item} />}
+          keyExtractor={(item) => item.id}
+          contentContainerStyle={styles.messageList}
+          onContentSizeChange={() => flatListRef.current?.scrollToEnd()}
         />
-        <TouchableOpacity
-          style={[styles.sendBtn, loading && styles.sendBtnDisabled]}
-          onPress={handleSend}
-          disabled={loading}
-        >
-          <Send size={20} color={loading ? COLORS.textMuted : COLORS.textDark} />
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
+        {loading && (
+          <View style={styles.typingContainer}>
+            <Animated.View style={[styles.dot, { opacity: dotAnim }]} />
+            <Animated.View style={[styles.dot, { opacity: Animated.subtract(1, dotAnim) }]} />
+            <Animated.View style={[styles.dot, { opacity: Animated.subtract(1, dotAnim) }]} />
+          </View>
+        )}
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Ask Bistro anything..."
+            placeholderTextColor={COLORS.textMuted}
+            value={input}
+            onChangeText={setInput}
+            editable={!loading}
+            multiline
+          />
+          <TouchableOpacity
+            style={[styles.sendBtn, loading && styles.sendBtnDisabled]}
+            onPress={handleSend}
+            disabled={loading}
+          >
+            <Send size={20} color={loading ? COLORS.textMuted : COLORS.textDark} />
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 }
 
